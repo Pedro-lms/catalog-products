@@ -1,19 +1,11 @@
-package com.devsuperior.dscatalog.entities;
+package com.devsuperior.dscatalog.dto;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "tb_role")
-public class Role {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class RoleDTO {
     private Long id;
     private String authority;
 
-    public Role() {
-    }
-
-    public Role(Long id, String authority) {
+    public RoleDTO(){}
+    public RoleDTO(Long id, String authority){
         this.id = id;
         this.authority = authority;
     }
@@ -34,4 +26,3 @@ public class Role {
         this.authority = authority;
     }
 }
-
