@@ -1,13 +1,22 @@
 package com.devsuperior.dscatalog.dto;
 
+import com.devsuperior.dscatalog.entities.Role;
+
 public class RoleDTO {
     private Long id;
     private String authority;
 
     public RoleDTO(){}
     public RoleDTO(Long id, String authority){
+        super();
         this.id = id;
         this.authority = authority;
+    }
+
+    public RoleDTO(Role role){
+        super();
+        id = role.getId();
+        authority = role.getAuthority();
     }
 
     public Long getId() {
